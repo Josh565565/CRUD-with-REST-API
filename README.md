@@ -57,13 +57,13 @@ Request (POST):
   "age": 30
 }
 Response (GET):
-[[
+[
   {
     "id": 1,
     "name": "John Doe",
     "age": 30
   }
-]]
+]
 Retrieve/Update/Delete Person by ID:
 Endpoint: /api/{id}/
 Methods: GET (retrieve) / PUT (update) / DELETE (delete)
@@ -91,7 +91,11 @@ Open Postman.
 Create a new request.
 Choose the HTTP method (GET, POST, PUT, DELETE) for the desired operation.
 Enter the API endpoint URL (http://josh565.pythonanywhere.com/api/) for the request.
-Add any required headers (e.g., Content-Type: application/json, Authorization).
 In the request body (if needed), provide the data in JSON format.
 Click the "Send" button to make the request.
 View the API's response in Postman.
+
+Note: for PUT request in postman: Enter the endpoint : http://josh565.pythonanywhere.com/api/id/  (replace the id with the actual id number) then enter the required details in the body section.
+
+
+for DELETE request: Enter the endpoint :http://josh565.pythonanywhere.com/api/id/ (replace id with the actual id number)
