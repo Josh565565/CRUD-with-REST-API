@@ -22,3 +22,14 @@ class PersonRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
             return Person.objects.get(pk=self.kwargs['pk'])
         except Person.DoesNotExist:
             raise NotFound("Person not found")
+ 
+class PersonByNameRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+
+    def get_object(self):
+        try:
+            name = self.kwargs['name']
+            return Person.objects.get(name=name)
+        except Person.DoesNotExist:
+            raise NotFound("Person not found by name")
