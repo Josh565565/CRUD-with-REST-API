@@ -15,4 +15,3 @@ class PersonApiTests(APITestCase):
         self.assertEqual(response.data['name'], 'John')
         self.assertEqual(response.data['age'], 30)
 
-    # Add more test methods for other CRUD operations based on name
